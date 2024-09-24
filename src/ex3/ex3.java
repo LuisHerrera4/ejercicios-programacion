@@ -14,9 +14,18 @@ Instruccions:
 
  */
 public class ex3 {
+    public static void main(String[] args) {
+        int n1=14;
+        float n2=20.352f;
+        String palabra = "euros";
 
-    int n1=14;
-    float n2=20.3f;
-    String num3= String.format("Tengo %d");
+        //Sin signos
+        String resultado1= String.format("Tengo %d euros en la cuenta bancaria. Y debo %.3f %s", n1, n2, palabra);
+        System.out.println(resultado1);
 
+        //Con signos y ceros en ambos lados
+        String resultado2= String.format("Tengo %,02d euros en la cuenta bancaria. Y debo %+08.3f %s", n1, n2, palabra);
+        System.out.println(resultado2);
+
+    }
 }
